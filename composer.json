@@ -1,0 +1,21 @@
+{
+    "name": "51998/app-salon",
+    "description": "Proyecto AppSalon",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models",
+            "Classes\\" : "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jennifer",
+            "email": "jennifer15aries@gmail.con"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    }
+}
