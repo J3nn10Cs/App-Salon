@@ -1,6 +1,6 @@
 {
     "name": "51998/app-salon",
-    "description": "Proyecto AppSalon",
+    "description": "Proyecto AppSalon, MVC, SQL, SASS, GULP",
     "autoload": {
         "psr-4": {
             "MVC\\" : "./",
