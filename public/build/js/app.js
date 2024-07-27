@@ -1,0 +1,1 @@
+const alert=document.querySelector(".alerta"),btnSubmit=document.querySelector(".boton");document.addEventListener("DOMContentLoaded",(()=>{btnSubmit.addEventListener("click",functionAlert)}));const functionAlert=()=>{e.preventDefault(),console.log("Hola mundo")};
