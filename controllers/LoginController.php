@@ -28,14 +28,19 @@
             
             //Instaciamos el usuario
             $usuario = new Usuario();
+            //creando las alertas en un array
+            $alertas = [];
 
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 //sincroniza el objeto vacio con los nuevos datos que hay
                 $usuario -> sincronizar($_POST);
-                //creando las alertas en un array
-                $alertas = [];
                 //Cuando se envien datos vacios
                 $alertas = $usuario -> validateNewAccount();
+                //Revisar que alertas esten vacias
+                if(empty($alertas)){
+                    //Verificar que el usuario no esté registrado
+                    $usuario -> userexists();
+                }
             }
 
             $router -> render('/auth/crear-cuenta', [

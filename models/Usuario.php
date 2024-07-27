@@ -37,7 +37,19 @@ class Usuario extends ActiveRecord{
         if(!$this->telefono){
             self::$alertas['error'][] = 'El telefono del cliente es obligatorio';
         }
+        if(!$this->password){
+            self::$alertas['error'][] = 'El password del cliente es obligatorio';
+        }if(strlen($this->password) < 6){
+            self::$alertas['error'][] = 'El password debe contener al menos 6 caracteres';
+        }
 
         return self::$alertas;
+    }
+
+    //Verificar usuario
+    public function userexists(){
+        $query = "SELECT * FROM " . self::$tabla . " WHERE email = '" . $this->email ."' LIMIT 1 ";
+
+        debuguear($query);
     }
 }
